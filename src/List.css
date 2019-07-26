@@ -1,0 +1,28 @@
+.List-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.List-pageNumbers {
+  display: flex;
+  justify-content: center;
+}
+
+.List-pageNumbers > ul {
+  color: blue;
+  user-select: none;
+  cursor: pointer;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.List-pageNumbers > ul:hover {
+  border: 1px solid black;
+}
