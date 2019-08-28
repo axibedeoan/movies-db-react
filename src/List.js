@@ -87,11 +87,6 @@ class List extends Component {
 
     return (
       <div className="List">
-        <Pagination
-          currentPage={currentPage}
-          pages={25}
-          switchPage={this.switchPage}
-        />
         <div className="List-list">
           {items.map(m => (
             <Card
@@ -104,6 +99,11 @@ class List extends Component {
             />
           ))}
         </div>
+        <Pagination
+          currentPage={currentPage}
+          pages={10}
+          switchPage={this.switchPage}
+        />
       </div>
     );
   }
