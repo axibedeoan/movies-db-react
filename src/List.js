@@ -17,9 +17,7 @@ class List extends Component {
   componentDidMount() {
     const { items } = this.state;
     const { type } = this.props;
-    const endpoint = `https://api.themoviedb.org/3/discover/${type}?api_key=${
-      this.apiKey
-    }`;
+    const endpoint = `https://api.themoviedb.org/3/discover/${type}?api_key=${this.apiKey}`;
 
     fetch(endpoint)
       .then(response => response.json())
@@ -36,9 +34,7 @@ class List extends Component {
   switchPage = pageNumber => {
     //const { movies } = this.state;
     const { type } = this.props;
-    const endpoint = `https://api.themoviedb.org/3/discover/${type}?page=${pageNumber}&api_key=${
-      this.apiKey
-    }`;
+    const endpoint = `https://api.themoviedb.org/3/discover/${type}?page=${pageNumber}&api_key=${this.apiKey}`;
 
     fetch(endpoint)
       .then(response => response.json())
@@ -52,6 +48,8 @@ class List extends Component {
         console.log(data);
       })
       .catch(error => console.log(error));
+
+    window.scrollTo(0, 0);
   };
 
   cutDescription = description => {
